@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana</title>
+</head>
+<body>
+    <h1>Kalkulator Sederhana</h1>
+    <h2>Fitur Penjumlahan</h2>
+
+    <label>Angka pertama:</label>
+    <input type="number" id="angka1">
+
+    <br><br>
+
+    <label>Angka kedua:</label>
+    <input type="number" id="angka2">
+
+    <br><br>
+
+    <button onclick="jumlahkan()">Hitung</button>
+
+    <h3 id="hasil">Hasil: -</h3>
+
+    <script>
+        function jumlahkan() {
+            const a = document.getElementById("angka1").value;
+            const b = document.getElementById("angka2").value;
+            const output = document.getElementById("hasil");
+
+            if (a.trim() === "" || b.trim() === "") {
+                output.textContent = "Masukkan kedua angka!";
+                return;
+            }
+
+            const hasil = Number(a) + Number(b);
+            output.textContent = "Hasil: " + hasil;
+        }
+    </script>
+</body>
+</html>
